@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Техномарт</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1> <!-- Заголовку h1 присваивать ли какой нибудь класс? -->
+      <p class="header-contacts">
+        <span class="header-phone">+7 (812) 555-05-55</span>
+        <span class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+      </p>
+
+      <nav class="header-navigation">
+        <a class="header-logo" href="index.html">
+          <img src="img/header-logo.svg" width="0" height="0" alt="Логотип-интернет магазина «Техномарт»"> <!-- Как все таки правильно оформить ссылку на главной странице -->
+        </a>
+        <div class="header-container">
+          <input type="search" name="search" value="Поиск:">
+          <a href="#">Закладки: 0</a>
+          <a href="#">Корзина: 10</a>
+          <a href="#">Оформить заказ</a>
+        </div>
+
+        <ul class="user-navigation">
+          <li class="user-profile"><a href="#">Равшан Джамшутович</a></li>
+          <!-- Нужно ли тут еще делать элемент списка для кнопки выхода из профиля, она без текста но с иконкой, в ТЗ о ней сказано -->
+          <li class="user-orders"><a href="#">Мои заказы</a></li>
+          <li class="user-account"><a href="#">Личный кабинет</a></li>
+        </ul> <!-- И в целом в разметке этого блока и названии классов как-то не уверен -->
+
+        <ul class="header-site-navigation">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="#">Компания</a></li>
+          <li><a href="catalog.html">Каталог</a></li> <!-- И какой тут правильно адрес ссылке указать? -->
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Спецпредложения</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+
+      <ul class="breadcrumbs">
+        <li><a href="index.html"></a></li>
+        <li><a href="#">Каталог</a></li>
+        <li><a href="#">Инструмент</a></li>
+        <li class="breadcrumbs-current">Перфораторы</li>
+      </ul>
+
+      <h2>Перфораторы</h2> <!-- Нужно ли присваивать класс этому заголовку -->
+
+      <section class="filters">
+        <h3>Фильтр:</h3>
+        <!-- здесь будет 3 формы: фильтр по цене, по производителю и группе питанию -->
+      </section>
+
+      <div class="sort"> <!-- Правильно ли в див блок сортировки обернуть, или лучше в section -->
+      </div>
+        <!-- здесь будет элемент сортировки каталога: по цене, по типц по функционалу -->
+
+
+      <section class="catalog">
+        <h3 class="visually-hidden">Список перфораторов</h3>
+        <ul class="catalog-list">
+          <li class="catalog-item">
+            <img src="img/bosch-bfg3000.jpg" alt="Перфоратор BOSCH BFG 3000">
+            <h4>
+              <span class="catalog-category">Перфоратор BOSCH</span>
+              <span class="catalog-item-title">BFG 3000</span>
+            </h4>
+            <p class="catalog-item-price">
+              <span class="catalog-category">22 500 р.</span>
+              <span class="catalog-item-title">15 500 р.</span>
+            </p>
+          </li>
+          <li class="catalog-item">
+            <img src="img/bosch-bfg6000.jpg" alt="Перфоратор BOSCH BFG 6000">
+            <h4>
+              <span class="catalog-category">Перфоратор BOSCH</span>
+              <span class="catalog-item-title">BFG 6000</span>
+            </h4>
+            <p class="catalog-item-price">
+              <span class="old-price">30 500 р.</span>
+              <span class="actual-price">25 500 р.</span>
+            </p>
+          </li>
+          <li class="catalog-item">
+            <p class="buy-item">
+              <a class="buy-button" href="#">Купить</a>
+              <a class="bookmark-button" href="#">В закладки</a>
+            </p>
+            <h4>
+              <span class="catalog-category">Перфоратор BOSCH</span>
+              <span class="catalog-item-title">BFG 2000</span>
+            </h4>
+            <span class="new-item">new</span>
+            <p class="catalog-item-price">
+              <span class="old-price"></span>
+              <span class="actual-price">12 500 р.</span>
+            </p>
+          </li>
+          <li class="catalog-item">
+            <img src="img/bosch-bfg3000.jpg" alt="Перфоратор BOSCH BFG 3000">
+            <h4>
+              <span class="catalog-category">Перфоратор BOSCH</span>
+              <span class="catalog-item-title">BFG 3000</span>
+            </h4>
+            <p class="catalog-item-price">
+              <span class="catalog-category">22 500 р.</span>
+              <span class="catalog-item-title">15 500 р.</span>
+            </p>
+          </li>
+          <li class="catalog-item">
+            <img src="img/bosch-bfg6000.jpg" alt="Перфоратор BOSCH BFG 6000">
+            <h4>
+              <span class="catalog-category">Перфоратор BOSCH</span>
+              <span class="catalog-item-title">BFG 6000</span>
+            </h4>
+            <span class="new-item">new</span>
+            <p class="catalog-item-price">
+              <span class="old-price">30 500 р.</span>
+              <span class="actual-price">25 500 р.</span>
+            </p>
+          </li>
+          <li class="catalog-item">
+            <img src="img/bosch-bfg2000.jpg" alt="Перфоратор BOSCH BFG 2000">
+            <h4>
+              <span class="catalog-category">Перфоратор BOSCH</span>
+              <span class="catalog-item-title">BFG 2000</span>
+            </h4>
+            <p class="catalog-item-price">
+              <span class="old-price"></span>
+              <span class="actual-price">12 500 р.</span>
+            </p>
+          </li>
+          <li class="catalog-item">
+            <img src="img/bosch-bfg3000.jpg" alt="Перфоратор BOSCH BFG 3000">
+            <h4>
+              <span class="catalog-category">Перфоратор BOSCH</span>
+              <span class="catalog-item-title">BFG 3000</span>
+            </h4>
+            <span class="new-item">new</span>
+            <p class="catalog-item-price">
+              <span class="catalog-category">22 500 р.</span>
+              <span class="catalog-item-title">15 500 р.</span>
+            </p>
+          </li>
+          <li class="catalog-item">
+            <img src="img/bosch-bfg6000.jpg" alt="Перфоратор BOSCH BFG 6000">
+            <h4>
+              <span class="catalog-category">Перфоратор BOSCH</span>
+              <span class="catalog-item-title">BFG 6000</span>
+            </h4>
+            <p class="catalog-item-price">
+              <span class="old-price">30 500 р.</span>
+              <span class="actual-price">25 500 р.</span>
+            </p>
+          </li>
+          <li class="catalog-item">
+            <img src="img/bosch-bfg2000.jpg" alt="Перфоратор BOSCH BFG 2000">
+            <h4>
+              <span class="catalog-category">Перфоратор BOSCH</span>
+              <span class="catalog-item-title">BFG 2000</span>
+            </h4>
+            <p class="catalog-item-price">
+              <span class="old-price"></span>
+              <span class="actual-price">12 500 р.</span>
+            </p>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer claas="site-footer">
+
+      <img src="img/footer-logo.svg" width="0" height="0" alt="Логотип-интернет магазина «Техномарт»"> <!-- Является ли этот логотип ссылкой? в стайлгайде его состояния при наведении и нажатии не описаны, поэтому не стал делать -->
+      <p class="footer-contacts">
+        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+        +7 (812) 555-05-55
+      </p>
+
+      <nav class="footer-navigation">
+        <ul class="footer-site-navigation">
+          <li><a href="#">Компания</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Каталог</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+            <!-- Вопрос с названиями классов навигационных списков - навигация по сайту в хэдере? навигация по сайту в футере? юзер навигация? навигация по типам продукции?  -->
+        <ul class="products-navigation">
+          <li><a href="#">Материалы</a></li>
+          <li><a href="#">Техника</a></li>
+          <li><a href="#">Инструмент</a></li>
+          <li><a href="#">Спецпредложения</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2010–2019 Компания «Техномарт»<br>
+          Все права защищены
+        </p>
+        <ul class="footer-social">
+          <li><a class="social-button" href="https://vk.com">Вконтакте</a></li>
+          <li><a class="social-button" href="https://facebook.com">Фейсбук</a></li>
+          <li><a class="social-button" href="https://instagram.com">Инстаграм</a></li>
+        </ul>
+        <p class="feedback">
+          <span>Обратная связь</span>
+          <a href="#">mail@htmlacademy.ru</a>
+        </p>
+        <p class="developer">
+          <span>Разработано -</span>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+        </p>
+      </div>
+
+    </footer>
+  </body>
