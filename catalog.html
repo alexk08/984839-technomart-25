@@ -6,29 +6,53 @@
   </head>
   <body>
     <header class="site-header">
-      <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1> <!-- Заголовку h1 присваивать ли какой нибудь класс? -->
-      <p class="header-contacts">
-        <span class="header-phone">+7 (812) 555-05-55</span>
-        <span class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
-      </p>
 
-      <nav class="header-navigation">
-        <a class="header-logo" href="index.html">
-          <img src="img/header-logo.svg" width="0" height="0" alt="Логотип-интернет магазина «Техномарт»"> <!-- Как все таки правильно оформить ссылку на главной странице -->
-        </a>
-        <div class="header-container">
-          <input type="search" name="search" value="Поиск:">
-          <a href="#">Закладки: 0</a>
-          <a href="#">Корзина: 10</a>
-          <a href="#">Оформить заказ</a>
-        </div>
+      <section class="top-header"> <!-- Конечно есть вопрос с названием этого класса -->
+        <a class="header-logo" href="index.html">Техномарт</a>
+        <!-- Как все таки правильно оформить ссылку на главной странице на главную страницу? -->
+        <input type="search" name="search" value="Поиск:">
+        <a class="header-bookmarks" href="#">Закладки: 0</a>
+        <a class="header-basket" href="#">Корзина: 10</a>
+        <a class="header-orders" href="#">Оформить заказ</a>
+      </section>
 
+      <section class="middle-header"> <!-- Конечно есть вопрос с названием этого класса -->
+        <h1 class="header-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+        <p class="header-contacts">
+          <span class="header-phone">+7 (812) 555-05-55</span>
+          <span class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+        </p>
         <ul class="user-navigation">
+          <li class="login-link"><a href="#">Войти</a></li>
+          <li class="reg-link"><a href="#">Регистрация </a></li>
+        </ul>
+        <ul class="login-navigation">
           <li class="user-profile"><a href="#">Равшан Джамшутович</a></li>
           <!-- Нужно ли тут еще делать элемент списка для кнопки выхода из профиля, она без текста но с иконкой, в ТЗ о ней сказано -->
           <li class="user-orders"><a href="#">Мои заказы</a></li>
           <li class="user-account"><a href="#">Личный кабинет</a></li>
         </ul> <!-- И в целом в разметке этого блока и названии классов как-то не уверен -->
+      </section>
+
+      <nav class="header-navigation">
+        <ul class="header-navigation-list">
+          <li><a>Главная</a></li> <!-- Как все таки правильно оформить ссылку на главной странице на главную страницу? -->
+          <li><a href="#">Компания</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Спецпредложения</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+
+    </header>
+    
+      
+
+     
+
+        
 
         <ul class="header-site-navigation">
           <li><a href="index.html">Главная</a></li>
