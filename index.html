@@ -8,7 +8,7 @@
     <header class="site-header">
 
       <section class="top-header"> <!-- Конечно есть вопрос с названием этого класса -->
-        <a class="header-logo">Техномарт</a>
+        <a class="header-logo"><img src="img/logo-technomart.svg" width="0" height="0" alt="Логотип интернет-магазина «Техномарт»"></a>
         <!-- Как все таки правильно оформить ссылку на главной странице на главную страницу? -->
         <input type="search" name="search" value="Поиск:">
         <a class="header-bookmarks" href="#">Закладки: 0</a>
@@ -22,10 +22,10 @@
           <span class="header-phone">+7 (812) 555-05-55</span>
           <span class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </p>
-        <ul class="user-navigation">
+        <ul class="login-navigation">
           <li class="login-link"><a href="#">Войти</a></li>
           <li class="reg-link"><a href="#">Регистрация </a></li>
-        </ul>
+        </ul><!-- Классы в этом списке присваивать элементам списка или ссылкам? или это при стилизации будет понятно? -->
       </section>
 
       <nav class="header-navigation">
@@ -42,40 +42,43 @@
 
     </header>
     <main class="container">
+
       <section class="company">
-        <h2>Компания «Техномарт»</h2><!-- Заголовку h2 присваивать ли какой нибудь класс? -->
-        <p>
+        <h2 class="section-title">Компания «Техномарт»</h2>
+        <p class="company-first-p">
           Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
-        </p>
+        </p class="company-second-p">
         <p>
           Мы можем доставить ваш товар в самые отдаленные точки России!
         </p>
-        <p>
+        <p class="company-third-p">
           Техномарт работает со многими транспортными компаниями:
         </p>
-        <ul class="transport">
+        <!-- Как тут более грамотно задать классы для параграфов, я не знаю. В таком формате их стилизовать можно через nth-child в классе .company Столько же писать.. -->
+        <ul class="transport-list">
           <li>Деловые линии</li>
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
         <a class="button" href="#">Подробнее о компании</a>
       </section>
+
       <section class="contacts">
-        <h2>Контакты</h2>
+        <h2 class="section-title">Контакты</h2>
         <p>
           Вы можете забрать товар сами,<br>заехав в наш офис:
         </p>
-        <p>
-          <a href="map.html">
-            <img src="img/map.svg" width="0" height="0" alt="Изображение-ссылка карты расположения офиса">
-          </a>
-        </p>
+        <a class="map-image" href="map.html">
+            <img src="img/map.png" width="0" height="0" alt="Изображение-ссылка карты расположения офиса">
+        </a>
+        <!-- 3.11. Блок карты: достаточная реализация — обычное изображение, клик по ней приводит к переходу на сервис карт.
+        4.3. Блок карты: обычное изображение. Клик по ней приводит к появлению полного размера интерактивной карты (смотрите папку слоёв «map hover»). Окно позиционируется относительно вьюпорта, а не страницы. Реализация по желанию. -->
         <a class="button" href="#">Заблудились? Напишите нам!</a>
       </section>
     </main>
     <footer class="site-footer">
-
-      <img src="img/footer-logo.svg" width="0" height="0" alt="Логотип-интернет магазина «Техномарт»"> <!-- Является ли этот логотип ссылкой? в стайлгайде его состояния при наведении и нажатии не описаны, поэтому не стал делать -->
+      <!-- А с футером что не так, я не понял... я вроде его слева направо, серху вниз размечал -->
+      <a class="footer-logo"><img src="img/logo-technomart.svg" width="0" height="0" alt="Логотип интернет-магазина «Техномарт»"></a>  
       <p class="footer-contacts">
         г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
         +7 (812) 555-05-55
@@ -89,7 +92,6 @@
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
-            <!-- Вопрос с названиями классов навигационных списков - навигация по сайту в хэдере? навигация по сайту в футере? юзер навигация? навигация по типам продукции?  -->
         <ul class="products-navigation">
           <li><a href="#">Материалы</a></li>
           <li><a href="#">Техника</a></li>
@@ -98,7 +100,7 @@
         </ul>
       </nav>
 
-      <div class="footer-bottom">
+      <section class="footer-bottom">
         <p class="footer-copyright">
           © 2010–2019 Компания «Техномарт»<br>
           Все права защищены
@@ -116,7 +118,7 @@
           <span>Разработано -</span>
           <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
-      </div>
+      </section>
 
     </footer>
   </body>

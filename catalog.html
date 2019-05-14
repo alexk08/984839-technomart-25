@@ -8,8 +8,7 @@
     <header class="site-header">
 
       <section class="top-header"> <!-- Конечно есть вопрос с названием этого класса -->
-        <a class="header-logo" href="index.html">Техномарт</a>
-        <!-- Как все таки правильно оформить ссылку на главной странице на главную страницу? -->
+        <a class="header-logo" href="index.html"><img src="img/logo-technomart.svg" width="0" height="0" alt="Логотип магазина «Техномарт»"></a>
         <input type="search" name="search" value="Поиск:">
         <a class="header-bookmarks" href="#">Закладки: 0</a>
         <a class="header-basket" href="#">Корзина: 10</a>
@@ -23,66 +22,50 @@
           <span class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </p>
         <ul class="user-navigation">
-          <li class="login-link"><a href="#">Войти</a></li>
-          <li class="reg-link"><a href="#">Регистрация </a></li>
-        </ul>
-        <ul class="login-navigation">
+          <!-- Нужно ли делать отдельно элемент с иконкой для входа в личный кабинет? Или реализовать это псевдоэментом при стилизации?  -->
           <li class="user-profile"><a href="#">Равшан Джамшутович</a></li>
-          <!-- Нужно ли тут еще делать элемент списка для кнопки выхода из профиля, она без текста но с иконкой, в ТЗ о ней сказано -->
+          <li class="user-logout"><a class="logout-button" href="#"><img src="img/logout-icon.svg" width="0" height="0" alt="Выйти из аккаунта"></a></li>
+          <!-- Сделал в списке ссылку с иконкой в формате svg. Нужен ли таким картинкам альтернативный текст? -->
           <li class="user-orders"><a href="#">Мои заказы</a></li>
           <li class="user-account"><a href="#">Личный кабинет</a></li>
-        </ul> <!-- И в целом в разметке этого блока и названии классов как-то не уверен -->
+        </ul> <!-- Классы в этом списке присваивать элементам списка или ссылкам? или это при стилизации будет понятно? -->
       </section>
 
       <nav class="header-navigation">
         <ul class="header-navigation-list">
-          <li><a>Главная</a></li> <!-- Как все таки правильно оформить ссылку на главной странице на главную страницу? -->
-          <li><a href="#">Компания</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Спецпредложения</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
-
-    </header>
-    
-      
-
-     
-
-        
-
-        <ul class="header-site-navigation">
           <li><a href="index.html">Главная</a></li>
           <li><a href="#">Компания</a></li>
-          <li><a href="catalog.html">Каталог</a></li> <!-- И какой тут правильно адрес ссылке указать? -->
+          <li><a>Каталог</a></li>
           <li><a href="#">Новости</a></li>
           <li><a href="#">Спецпредложения</a></li>
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
       </nav>
+
     </header>
     <main class="container">
 
       <ul class="breadcrumbs">
-        <li><a href="index.html"></a></li>
+        <li><a class="home-button" href="index.html"><img src="img/home-icon.svg" width="0" height="0" alt="Вернуться на главную страницу"></a></li>
         <li><a href="#">Каталог</a></li>
         <li><a href="#">Инструмент</a></li>
         <li class="breadcrumbs-current">Перфораторы</li>
       </ul>
 
-      <h2>Перфораторы</h2> <!-- Нужно ли присваивать класс этому заголовку -->
+      <h2 class="page-title">Перфораторы</h2> 
 
-      <section class="filters">
-        <h3>Фильтр:</h3>
-        <!-- здесь будет 3 формы: фильтр по цене, по производителю и группе питанию -->
+      <section class="filter">
+        <h3 class="filter-title">Фильтр:</h3>
+        <span class="price-filter">Цена:</span>
+        <span class="brand-filter">Производители:</span>
+        <span class="power-filter">Питание:</span>
+        <!-- Не делал разметку Производители и Питание, потому что это формы, а про формы в задании написано - пока их не трогать. И на лекции их не размечали. -->
       </section>
 
-      <div class="sort"> <!-- Правильно ли в див блок сортировки обернуть, или лучше в section -->
-      </div>
+      <section class="sort">
+        <h3 class="sort-title">Сортировка:</h3>
+      </section>
         <!-- здесь будет элемент сортировки каталога: по цене, по типц по функционалу -->
 
 
@@ -90,19 +73,20 @@
         <h3 class="visually-hidden">Список перфораторов</h3>
         <ul class="catalog-list">
           <li class="catalog-item">
-            <img src="img/bosch-bfg3000.jpg" alt="Перфоратор BOSCH BFG 3000">
-            <h4>
+            <img src="img/bosch-bfg3000.jpg" width="0" height="0" alt="Перфоратор BOSCH BFG 3000">
+            <h4 class="item-title">
               <span class="catalog-category">Перфоратор BOSCH</span>
               <span class="catalog-item-title">BFG 3000</span>
             </h4>
             <p class="catalog-item-price">
-              <span class="catalog-category">22 500 р.</span>
-              <span class="catalog-item-title">15 500 р.</span>
+              <span class="old-price">22 500 р.</span>
+              <span class="actual-price">15 500 р.</span>
             </p>
           </li>
+          <!-- Прошу также карточку товара разобрать, по ним есть вопросы по всплывающим кнопкам, по зачеркнутой цене, по метке new -->
           <li class="catalog-item">
-            <img src="img/bosch-bfg6000.jpg" alt="Перфоратор BOSCH BFG 6000">
-            <h4>
+            <img src="img/bosch-bfg6000.jpg" width="0" height="0" alt="Перфоратор BOSCH BFG 6000">
+            <h4 class="item-title">
               <span class="catalog-category">Перфоратор BOSCH</span>
               <span class="catalog-item-title">BFG 6000</span>
             </h4>
@@ -116,7 +100,7 @@
               <a class="buy-button" href="#">Купить</a>
               <a class="bookmark-button" href="#">В закладки</a>
             </p>
-            <h4>
+            <h4 class="item-title">
               <span class="catalog-category">Перфоратор BOSCH</span>
               <span class="catalog-item-title">BFG 2000</span>
             </h4>
@@ -127,19 +111,19 @@
             </p>
           </li>
           <li class="catalog-item">
-            <img src="img/bosch-bfg3000.jpg" alt="Перфоратор BOSCH BFG 3000">
-            <h4>
+            <img src="img/bosch-bfg3000.jpg" width="0" height="0" alt="Перфоратор BOSCH BFG 3000">
+            <h4 class="item-title">
               <span class="catalog-category">Перфоратор BOSCH</span>
               <span class="catalog-item-title">BFG 3000</span>
             </h4>
             <p class="catalog-item-price">
-              <span class="catalog-category">22 500 р.</span>
-              <span class="catalog-item-title">15 500 р.</span>
+              <span class="old-price">22 500 р.</span>
+              <span class="actual-price">15 500 р.</span>
             </p>
           </li>
           <li class="catalog-item">
-            <img src="img/bosch-bfg6000.jpg" alt="Перфоратор BOSCH BFG 6000">
-            <h4>
+            <img src="img/bosch-bfg6000.jpg" width="0" height="0" alt="Перфоратор BOSCH BFG 6000">
+            <h4 class="item-title">
               <span class="catalog-category">Перфоратор BOSCH</span>
               <span class="catalog-item-title">BFG 6000</span>
             </h4>
@@ -150,8 +134,8 @@
             </p>
           </li>
           <li class="catalog-item">
-            <img src="img/bosch-bfg2000.jpg" alt="Перфоратор BOSCH BFG 2000">
-            <h4>
+            <img src="img/bosch-bfg2000.jpg" width="0" height="0" alt="Перфоратор BOSCH BFG 2000">
+            <h4 class="item-title">
               <span class="catalog-category">Перфоратор BOSCH</span>
               <span class="catalog-item-title">BFG 2000</span>
             </h4>
@@ -161,20 +145,20 @@
             </p>
           </li>
           <li class="catalog-item">
-            <img src="img/bosch-bfg3000.jpg" alt="Перфоратор BOSCH BFG 3000">
-            <h4>
+            <img src="img/bosch-bfg3000.jpg" width="0" height="0" alt="Перфоратор BOSCH BFG 3000">
+            <h4 class="item-title">
               <span class="catalog-category">Перфоратор BOSCH</span>
               <span class="catalog-item-title">BFG 3000</span>
             </h4>
             <span class="new-item">new</span>
             <p class="catalog-item-price">
-              <span class="catalog-category">22 500 р.</span>
-              <span class="catalog-item-title">15 500 р.</span>
+              <span class="old-price">22 500 р.</span>
+              <span class="actual-price">15 500 р.</span>
             </p>
           </li>
           <li class="catalog-item">
-            <img src="img/bosch-bfg6000.jpg" alt="Перфоратор BOSCH BFG 6000">
-            <h4>
+            <img src="img/bosch-bfg6000.jpg" width="0" height="0" alt="Перфоратор BOSCH BFG 6000">
+            <h4 class="item-title">
               <span class="catalog-category">Перфоратор BOSCH</span>
               <span class="catalog-item-title">BFG 6000</span>
             </h4>
@@ -184,8 +168,8 @@
             </p>
           </li>
           <li class="catalog-item">
-            <img src="img/bosch-bfg2000.jpg" alt="Перфоратор BOSCH BFG 2000">
-            <h4>
+            <img src="img/bosch-bfg2000.jpg" width="0" height="0" alt="Перфоратор BOSCH BFG 2000">
+            <h4 class="item-title">
               <span class="catalog-category">Перфоратор BOSCH</span>
               <span class="catalog-item-title">BFG 2000</span>
             </h4>
@@ -200,8 +184,8 @@
     </main>
 
     <footer class="site-footer">
-
-      <img src="img/footer-logo.svg" width="0" height="0" alt="Логотип-интернет магазина «Техномарт»"> <!-- Является ли этот логотип ссылкой? в стайлгайде его состояния при наведении и нажатии не описаны, поэтому не стал делать -->
+      <!-- А с футером что не так, я не понял... я вроде его слева направо, серху вниз размечал -->
+      <a class="footer-logo" href="index.html"><img src="img/logo-technomart.svg" width="0" height="0" alt="Логотип интернет-магазина «Техномарт»"></a>  
       <p class="footer-contacts">
         г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
         +7 (812) 555-05-55
@@ -215,7 +199,6 @@
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
-            <!-- Вопрос с названиями классов навигационных списков - навигация по сайту в хэдере? навигация по сайту в футере? юзер навигация? навигация по типам продукции?  -->
         <ul class="products-navigation">
           <li><a href="#">Материалы</a></li>
           <li><a href="#">Техника</a></li>
@@ -224,7 +207,7 @@
         </ul>
       </nav>
 
-      <div class="footer-bottom">
+      <section class="footer-bottom">
         <p class="footer-copyright">
           © 2010–2019 Компания «Техномарт»<br>
           Все права защищены
@@ -242,7 +225,7 @@
           <span>Разработано -</span>
           <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
-      </div>
+      </section>
 
     </footer>
   </body>
