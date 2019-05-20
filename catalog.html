@@ -23,7 +23,7 @@
         </p>
         <div class="user-menu">
           <a class="user-profile" href="#">Равшан Джамшутович</a>
-          <a class="user-logout" href="#"></a>
+          <a class="visually-hidden user-logout" href="#">Выход</a>
           <a class="user-orders" href="#">Мои заказы</a>
           <a class="user-account" href="#">Личный кабинет</a>
         </div>
@@ -55,25 +55,50 @@
 
       <section class="filter">
         <h3 class="filter-title">Фильтр:</h3>
-        <!-- Фильт по цене -->
-        <div class="brand-filter">
-          <h4 class="filter-subtitle">Производители</h4>
-            <ul class="brand-filter-list">
-              <li>Bosch</li>
-              <li>Интерскол</li>
-              <li>Makita</li>
-              <li>Dewalt</li>
-              <li>Hitachi</li>
+        <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+          <!-- Фильт по цене -->
+          <fieldset> <!-- Я бы еще для стилизации классы тегам fieldset добавил -->
+            <legend>Производители:</legend>
+              <ul class="brand-filter-list">
+                <li>
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="bosch" id="filter-bosch" checked>
+                  <label for="filter-bosch">Bosch</label>
+                </li>
+                <li>
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="interscol" id="filter-interscol">
+                  <label for="filter-interscol">Интерскол</label>
+                </li>
+                <li>
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="makita" id="filter-makita" checked>
+                  <label for="filter-makita">Makita</label>
+                </li>
+                <li>
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="dewalt" id="filter-dewalt">
+                  <label for="filter-dewalt">Dewalt</label>
+                </li>
+                <li>
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hitachi" id="filter-hitachi">
+                  <label for="filter-hitachi">Hitachi</label>
+                </li>
+              </ul>
+          </fieldset>
+          <!-- тегам li классы не добавлял, потому что они одинаково все стилизованы, а классы есть у ul -->
+          <fieldset>
+            <legend>Питание</legend>
+            <ul class="supply-filter-list">
+              <li>
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="supply-filter" value="battery" id="supply-filter-battery" checked>
+                <label for="supply-filter-battery">Аккумуляторные</label>
+              </li>
+              <li>
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="supply-filter" value="power" id="supply-filter-power">
+                <label for="supply-filter-power">Сетевые</label>
+              </li>
             </ul>
-        </div>
-        <div class="power-filter">
-          <h4 class="filter-subtitle">Питание</h4>
-          <ul class="power-filter-list">
-            <li>Аккумуляторные</li>
-            <li>Сетевые</li>
-          </ul>
-         </div>
-        </section>
+           </fieldset>
+           <button class="button button-apply" type="submit">Показать</button>
+        </form>
+      </section>
 
       <section class="sort">
         <h3 class="sort-title">Сортировка:</h3>
@@ -163,6 +188,14 @@
             <span class="actual-price">12 500 р.</span>
           </li>
         </ul>
+      </section>
+
+      <section class="modal modal-in-basket">
+        <h3 class="visually-hidden">Статус работы с товаром</h3>
+        <p>Товар добавлен в корзину</p>
+        <a class="button" href="#">Оформить заказ</a>
+        <button class="button button-continue" type="button">Продолжить покупки</button>
+        <button class="modal-close" type="button">Закрыть</button>
       </section>
 
     </main>

@@ -80,19 +80,19 @@
       <section class="modal modal-write-us">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
-          <p class="write-us-item">
+          <p class="write-us-item-name">
             <label>
               Ваше  имя:
               <input type="text" name="name" placeholder="Имя Фамилия">
             </label>
           </p>
-          <p class="write-us-item">
+          <p class="write-us-item-email">
             <label>
               Ваш e-mail:
-              <input type="text" name="e-mail" placeholder="e-mail@example.com">
+              <input type="email" name="email" placeholder="e-mail@example.com">
             </label>
           </p>
-          <p class="write-us-item">
+          <p class="write-us-item-text-mail">
             <label>
               Текст письма:
               <textarea name="text-mail" rows="5" cols="20" placeholder="В свободной форме"></textarea>
@@ -103,10 +103,10 @@
         <button class="modal-close" type="button">Закрыть</button>
       </section>
 
-      <section class="modal-map">
+      <section class="modal-map"> <!-- класс modal данноу тегу section не добавлял осознанно, т.к. общей стилизации кроме тени и положения крестика у этого попапа в сравнении с остальными нет, а тень и крестик добавлю в свойства для класса modal-map -->
         <h2 class="visually-hidden">Как до нас добраться</h2>
         <p>
-          <img src="img/big-map1.jpg" width="940" height="446" alt="Офис компании по адресу г. Санкт-Петербург, ул. Большая Конюшенная д. 19/"8>
+          <img src="img/big-map.jpg" width="940" height="446" alt="Офис компании по адресу г. Санкт-Петербург, ул. Большая Конюшенная д. 19/8">
         </p>
         <button class="modal-close" type="button">Закрыть</button>
       </section>
