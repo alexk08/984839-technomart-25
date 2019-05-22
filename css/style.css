@@ -33,7 +33,7 @@ a {
 
 .top-header a:hover {
   background-color: #212a3a;
-} 
+}
 
 .top-header a:focus {
   background-color: #161d29;
@@ -112,7 +112,7 @@ a.reg-link:focus {
 .header-navigation {
   font-size: 17px;
   line-height: 17px;
-  
+
   background-color: #32425c;
 }
 
@@ -225,6 +225,10 @@ a.reg-link:focus {
   line-height: 18px;
 
   background-color: #293449
+}
+
+.footer-social a {
+  color: #ffffff;
 }
 
 .feedback a,
