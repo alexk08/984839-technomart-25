@@ -3,10 +3,10 @@ body {
   padding: 0;
 
   font-family: "Cuprum", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 17px;
+  line-height: 18px;
   font-weight: 400;
-  color: #ffffff;
+  color: #000000;
 
   background-color: #ffffff;
 }
@@ -15,13 +15,18 @@ a {
   text-decoration: none;
 }
 
-.site-header {
-  background-color: #f4f7f9;
+.index-header {
+  background-color: #f3f7f9;
+  background-image: url("img/top-background.jpg");
+  background-position: 0 0;
 }
 
+.catalog-header {
+  background-color: #f2f6f8;
+}
+
+
 .top-header {
-  font-size: 17px;
-  line-height: 18px;
   color: #ffffff;
 
   background-color: #293449;
@@ -52,12 +57,26 @@ a.header-logo:focus {
   background-color: #ba2732;
 }
 
-/*.search-input {
-  font-size: 17px;
-  line-height: 18px;
+.search-input {
+  font: inherit;
 
-  background-color: #32425c;
-}*/
+  background-color: #293449;
+  border: none;
+}
+
+.search-input::placeholder {
+  color: #ffffff;
+}
+
+.search-input:hover {
+  background-color: #212a3a;
+}
+
+.search-input:focus {
+  background-color: #ffffff;
+}
+
+Мне кажется 
 
 .header-orders {
   background-color: #63a63e;
@@ -74,6 +93,7 @@ a.header-orders:focus {
 .header-title {
   font-size: 16px;
   line-height: 23px;
+  font-weight: 400;
   font-style: italic;
   color: #ee3643;
 }
@@ -110,7 +130,6 @@ a.reg-link:focus {
 }
 
 .header-navigation {
-  font-size: 17px;
   line-height: 17px;
 
   background-color: #32425c;
@@ -149,6 +168,7 @@ a.reg-link:focus {
 .section-title {
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
@@ -173,14 +193,17 @@ a.reg-link:focus {
 .button:focus {
   background-color: #ba2732;
 }
+
 .modal {
   display: none;
 }
 
 .site-footer {
-  background-color: #32425c;
   font-size: 18px;
   line-height: 24px;
+  color: #ffffff;
+
+  background-color: #32425c;
 }
 
 .footer-logo {
@@ -222,7 +245,6 @@ a.reg-link:focus {
 
 .footer-bottom {
   font-size: 16px;
-  line-height: 18px;
 
   background-color: #293449
 }
@@ -246,3 +268,191 @@ a.reg-link:focus {
   text-decoration: none;
   color: #ee3643;
 }
+
+/*отличающиеся стили для страницы каталога*/
+
+.header-full-basket {
+  background-color: #ee3643;
+}
+
+a.header-full-basket:hover {
+  background-color: #ca2c37;
+}
+
+a.header-full-basket:focus {
+  background-color: #ba2732;
+}
+
+.user-profile {
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+a.user-profile:focus {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.user-orders,
+.user-account {
+  font-size: 16px;
+  text-decoration: underline;
+  color: #32425c;
+
+  background-color: #f4f7f9;
+}
+
+a.user-orders:hover,
+a.user-account:hover {
+  color: #ee3643;
+}
+
+a.user-orders:focus,
+a.user-account:focus {
+  color: rgba(50, 66, 92, 0.3);
+}
+
+.user-logout {
+  display: none;
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.page-title {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #32425c;
+
+  background-color: #f2f6f8;
+}
+
+.filter {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000000; 
+
+  background-color: #ffffff;
+}
+
+.filter-title {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+
+  background-color: #f7f3ec
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter legend {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.filter ul {
+  list-style: none;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.filter-input:disabled + label {
+  color: #000000;
+
+  opacity: 0.4;
+}
+
+.catalog {
+  font-family: "PT Sans", Arial, sans-serif;
+  color: #000000;
+}
+
+.catalog h3 {
+  display: none;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item {
+  border: 1px solid #e5e5e5;
+}
+
+.catalog-item div {
+  text-align: center;
+}
+
+.catalog-item-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.old-price {
+  font-weight: 700;
+  text-decoration: line-through;
+  text-transform:uppercase;
+  color: #999999;
+
+  background-color: #ffffff;
+}
+
+.actual-price {
+  font-weight: 700;
+  text-transform:uppercase;
+  color: #ffffff;
+
+  background-color: #ee3643;
+}
+
+.button-catalog {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  text-align: center;
+  color: #000000;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+}
+
+.button-catalog:hover {
+  border-color: #bdc6ca;
+}
+
+.button-catalog:focus {
+  border-color: #ee3643;
+}
+
+/*.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  …
+}*/
+
