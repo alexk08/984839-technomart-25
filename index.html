@@ -3,41 +3,38 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="normalize.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans+Narrow|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-    
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <header class="index-header">
+    <header class="page-header">
 
-      <section class="top-header"> <!-- Конечно есть вопрос с названием этого класса -->
-        <a class="header-logo"><img src="img/logo-technomart.svg" width="137" height="22" alt="Логотип интернет-магазина «Техномарт»"></a>
-        <!-- Как все таки правильно оформить ссылку на главной странице на главную страницу? -->
-
-        <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="top-header">
+        <a class="header-logo"><img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип интернет-магазина «Техномарт»"></a>
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
           <input class="search-input" type="search" name="search" placeholder="Поиск:">
         </form>
-        <a class="header-bookmarks" href="#">Закладки: 0</a>
-        <a class="header-basket" href="#">Корзина: 0</a>
-        <a class="header-orders" href="#">Оформить заказ</a>
-      </section>
+        <a class="header-item" href="#">Закладки: <span>0</span></a>
+        <a class="header-item basket" href="#">Корзина: <span>0</span></a>
+        <a class="header-item order" href="#">Оформить заказ</a>
+      </div>
 
-      <section class="middle-header"> <!-- Конечно есть вопрос с названием этого класса -->
+      <div class="middle-header">
         <h1 class="header-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-        <p class="header-contacts">
-          <span class="header-phone">+7 (812) 555-05-55</span>
-          <span class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
-        </p>
+        <div class="header-contacts">
+          <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <p class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        </div>
         <ul class="login">
           <li><a class="login-link" href="#">Войти</a></li>
           <li><a class="reg-link" href="#">Регистрация </a></li>
         </ul>
-      </section>
+      </div>
 
-      <nav class="header-navigation">
-        <ul class="header-navigation-list">
-          <li><a>Главная</a></li> <!-- Как все таки правильно оформить ссылку на главной странице на главную страницу? -->
+      <nav class="navigation">
+        <ul class="navigation-list">
+          <li><a>Главная</a></li>
           <li><a href="#">Компания</a></li>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="#">Новости</a></li>
@@ -48,57 +45,59 @@
       </nav>
 
     </header>
-    <main class="container">
+    <main class="page-content">
 
       <section class="company">
-        <h2 class="section-title">Компания «Техномарт»</h2>
-        <p class="company-first-p">
-          Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
-        </p>
-        <p class="company-second-p">
-          Мы можем доставить ваш товар в самые отдаленные точки России!
-        </p>
-        <p class="company-third-p">
-          Техномарт работает со многими транспортными компаниями:
-        </p>
-        <!-- Как тут более грамотно задать классы для параграфов, я не знаю. В таком формате их стилизовать можно через nth-child в классе .company Столько же писать.. -->
-        <ul class="transport-list">
-          <li>Деловые линии</li>
-          <li>Автотрейдинг</li>
-          <li>ЖелДорЭкспедиция</li>
-        </ul>
-        <a class="button" href="#">Подробнее о компании</a>
+        <div class="company-inner">
+          <h2 class="title">Компания «Техномарт»</h2> <!-- Дюже мне не нравиться название этого класса, какое-то оно слишком общее, а заголовком при этом на сайте хватает, а вот тут именно просто title -->
+          <p>
+            Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
+          </p>
+          <p>
+            Мы можем доставить ваш товар в самые отдаленные точки России!
+          </p>
+          <p>
+            Техномарт работает со многими транспортными компаниями:
+          </p>
+          <!-- Как тут более грамотно задать классы для параграфов, я не знаю. В таком формате их стилизовать можно через nth-child в классе .company Столько же писать.. -->
+          <ul class="transport-list">
+            <li>Деловые линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
+          </ul>
+          <a class="button" href="#">Подробнее о компании</a>
+        </div>
       </section>
 
       <section class="contacts">
-        <h2 class="section-title">Контакты</h2>
+        <h2 class="title">Контакты</h2>
         <p>
-          Вы можете забрать товар сами,<br>заехав в наш офис:
+          Вы можете забрать товар сами, заехав в наш офис:
         </p>
         <a class="map-image" href="map.html">
             <img src="img/map.jpg" width="300" height="158" alt="Изображение-ссылка карты расположения офиса">
         </a>
-        <!-- 3.11. Блок карты: достаточная реализация — обычное изображение, клик по ней приводит к переходу на сервис карт.
-        4.3. Блок карты: обычное изображение. Клик по ней приводит к появлению полного размера интерактивной карты (смотрите папку слоёв «map hover»). Окно позиционируется относительно вьюпорта, а не страницы. Реализация по желанию. -->
-        <a class="button" href="#">Заблудились? Напишите нам!</a>
+        <a class="button" href="write-us.html">
+          Заблудились? Напишите нам!
+        </a>
       </section>
 
       <section class="modal modal-write-us">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
-          <p class="write-us-item-name">
+          <p class="write-us-item name">
             <label>
               Ваше  имя:
               <input type="text" name="name" placeholder="Имя Фамилия">
             </label>
           </p>
-          <p class="write-us-item-email">
+          <p class="write-us-item email">
             <label>
               Ваш e-mail:
               <input type="email" name="email" placeholder="e-mail@example.com">
             </label>
           </p>
-          <p class="write-us-item-text-mail">
+          <p class="write-us-item message">
             <label>
               Текст письма:
               <textarea name="text-mail" rows="5" cols="20" placeholder="В свободной форме"></textarea>
@@ -118,7 +117,7 @@
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="page-footer">
       <!-- А с футером что не так, я не понял... я вроде его слева направо, серху вниз размечал -->
       <a class="footer-logo"><img src="img/logo-technomart.svg" width="137" height="22" alt="Логотип интернет-магазина «Техномарт»"></a>
       <p class="footer-contacts">
@@ -142,25 +141,25 @@
         </ul>
       </nav>
 
-      <section class="footer-bottom">
+      <div class="footer-bottom">
         <p class="footer-copyright">
           © 2010–2019 Компания «Техномарт»<br>
           Все права защищены
         </p>
         <ul class="footer-social">
-          <li><a class="social-button" href="https://vk.com">Вконтакте</a></li>
-          <li><a class="social-button" href="https://facebook.com">Фейсбук</a></li>
-          <li><a class="social-button" href="https://instagram.com">Инстаграм</a></li>
+          <li><a class="social-button vk" href="https://vk.com">Вконтакте</a></li>
+          <li><a class="social-button facebook" href="https://facebook.com">Фейсбук</a></li>
+          <li><a class="social-button instagram" href="https://instagram.com">Инстаграм</a></li>
         </ul>
         <p class="feedback">
           <span>Обратная связь</span>
-          <a href="#">mail@htmlacademy.ru</a>
+          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </p>
         <p class="developer">
           <span>Разработано -</span>
-          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a>
         </p>
-      </section>
+      </div>
 
     </footer>
   </body>
