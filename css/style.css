@@ -391,7 +391,7 @@ a.user-account:focus {
   color: #000000;
 }
 
-.catalog h3 {
+.catalog h3.visually-hidden {
   display: none;
 }
 
@@ -424,6 +424,48 @@ a.user-account:focus {
   color: #ffffff;
 
   background-color: #ee3643;
+}
+
+.button-buy,
+.button-bookmarks {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.button-buy {
+  color: #ffffff;
+
+  background-color: #63a63e;
+}
+
+.button-buy:hover {
+  background-color: #5fbb2d;
+}
+
+.button-buy:focus {
+  background-color: #518534;
+}
+
+.button-bookmarks {
+  vertical-align: middle;
+  color: #32425c;
+
+  background-color: #ffffff;
+
+  border: 3px solid #63a63e;
+}
+
+.button-bookmarks:hover {
+  border-color: #32425c;
+}
+
+.button-bookmarks:focus {
+  color: rgba(50, 66, 92, 0.3);
+
+  border-color: rgba(50, 66, 92, 0.3);
 }
 
 .button-apply {
