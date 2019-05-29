@@ -498,3 +498,38 @@ a.user-account:focus {
   …
 }*/
 
+/*Стили для сеток*/
+
+.page-header {
+  margin: 0;
+  padding: 0;
+
+  width: auto;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+
+  width: 940px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.wrapper {
+  width: 940px;
+
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.middle-header {
+  flex-basis: 158px;
+}
+
+.navigation {
+  /*width: 940px;*/
+  flex-basis: 60px;
+  margin-bottom: 60px;
+}
