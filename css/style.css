@@ -501,35 +501,171 @@ a.user-account:focus {
 /*Стили для сеток*/
 
 .page-header {
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  margin-bottom: 60px;
 
-  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 320px;
+}
+
+.top-header {
+  width: 100%;
+  margin-bottom: 45px;
+
+  min-height: 42px;
 }
 
 .container {
-  margin: 0 auto;
-  padding: 0 10px;
-
   width: 940px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.wrapper {
-  width: 940px;
-
   margin: 0 auto;
   padding: 0 10px;
 }
+
+/*.wrapper {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}*/
 
 .middle-header {
-  flex-basis: 158px;
+  margin-bottom: 40px;
 }
 
 .navigation {
-  /*width: 940px;*/
-  flex-basis: 60px;
   margin-bottom: 60px;
+}
+
+.top-header .container {
+  display: flex;
+}
+
+.header-logo {
+  width: 220px;
+  height: 42px;
+}
+
+.search-input {
+  width: 270px;
+  height: 42px;
+}
+
+.header-item {
+  width: 150px;
+  text-align: center;
+}
+
+/*.navigation-list {
+  padding: 0;
+  margin: 0;
+}*/
+
+.page-content {
+  margin-bottom: 85px;
+  width: 100%;
+}
+
+.page-content .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title,
+.company p,
+.contacts p,
+.transport-list {
+  margin: 0;
+  padding: 0;
+  /*margin-bottom: 40px;*/
+}
+
+.company {
+  width: 535px;
+  height: 395px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contacts {
+  width: 300px;
+  height: 395px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+.page-footer {
+  width: 100%;
+}
+
+.page-footer>.container {
+  height: 193px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  width: 220px;
+  height: 68px;
+  margin-bottom: 25px;
+}
+
+.footer-contacts {
+  margin: 0px;
+  padding: 0px;
+}
+
+.footer-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer-site-navigation {
+  margin: 0px;
+  padding: 0px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.products-navigation {
+  margin: 0px;
+  padding: 0px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-site-navigation li {
+  margin-left: 60px;
+}
+
+.products-navigation li {
+  margin-left: 60px;
+}
+
+.footer-bottom .container {
+  height: 107px;
+
+  display: flex;
+  justify-content: space-between;
 }
