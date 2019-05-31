@@ -58,14 +58,17 @@ img {
 
 .header-logo {
   background-color: #ee3643;
+  box-shadow: 0 5px 0 0 #b52933;
 }
 
 .header-logo:hover {
   background-color: #ca2c37;
+  box-shadow: 0 5px 0 0 #9a212a;
 }
 
 .header-logo:focus {
   background-color: #ba2732;
+  box-shadow: 0 5px 0 0 #8e1e26;
 }
 
 .search-input {
@@ -538,20 +541,123 @@ a.user-account:focus {
   width: 220px;
   height: 18px;
   padding-top: 13px;
-  padding-bottom: 16px;
-  text-align: center;
+  padding-bottom: 11px;
 
-  box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.24);
+  text-align: center; 
 }
 
 .search-input {
+  box-sizing: border-box;
+  padding-left: 49px;
   width: 270px;
   height: 42px;
 }
 
-.header-item {
+.search-form {
+  position: relative; 
+}
+
+.search-form::before {
+  content: "";
+
+  width: 17px;
+  height: 17px;
+
+  background-image: url("../img/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  top: 12px;
+  left: 17px;
+  position: absolute;
+
+  opacity: 0.5;
+}
+
+.search-form:hover::before {
+  opacity: 1;
+}
+
+.header-list {
+  padding: 0;
+  margin: 0;
+  width: 450px;
+  list-style: none;
+
+  display: flex;
+}
+
+.header-list li {
   width: 150px;
   text-align: center;
+}
+
+/*В макете ссылка "Закладки" и "Корзина" в родительском блоке находятся не по центру по горизонтали,
+а ссылка "Оформить заказ" поцентру. Я же сделал все эти 3 ссылки по центру. По-другому пока не получается.
+И еще при увеличении масштаба сайта в браузере top-header и middle-header начинают вываливаться и кнопка корзина пропадает*/
+.header-item {
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  
+  vertical-align: middle;
+}
+
+.bookmarks {
+  position: relative;
+}
+
+.bookmarks::before {
+  content: "";
+
+  width: 14px;
+  height: 16px;
+
+  background-image: url("../img/icon-bookmark.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  top: 12px;
+  left: 17px;
+  position: absolute;
+
+  opacity: 0.5;
+}
+
+.bookmarks:hover::before {
+  opacity: 1;
+}
+
+.bookmarks:focus::before {
+  opacity: 0.3;
+}
+
+.basket {
+  position: relative;
+}
+.basket::before {
+  content: "";
+
+  width: 14px;
+  height: 16px;
+
+  background-image: url("../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  top: 12px;
+  left: 17px;
+  position: absolute;
+
+  opacity: 0.5;
+}
+
+.basket:hover::before {
+  opacity: 1;
+}
+
+.basket:focus::before {
+  opacity: 0.3;
 }
 
 .middle-header {
@@ -631,11 +737,6 @@ a.user-account:focus {
   flex-direction: column;
   justify-content: space-between;
 }
-
-
-
-
-
 
 .page-footer {
   width: 100%;
