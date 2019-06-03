@@ -56,7 +56,8 @@ img {
   background-color: #518534;
 }
 
-.header-logo {
+.header-logo,
+.header-logo-current {
   background-color: #ee3643;
   box-shadow: 0 5px 0 0 #b52933;
 }
@@ -156,6 +157,14 @@ img {
   background-color: #1d2739;
 }
 
+.navigation .current:hover,
+.navigation .current:focus {
+  color: #ffffff;
+  background-color: #32425c;
+  box-shadow: inset 0 -5px 0 0 #293449;
+}
+
+
 .company,
 .contacts {
   color: #000000;
@@ -210,7 +219,8 @@ img {
   background-color: #32425c;
 }
 
-.footer-logo {
+.footer-logo,
+.footer-logo-current {
   background-color: #ee3643;
 }
 
@@ -537,13 +547,14 @@ a.user-account:focus {
   display: flex;
 }
 
-.header-logo {
+.header-logo,
+.header-logo-current {
   width: 220px;
   height: 18px;
   padding-top: 13px;
   padding-bottom: 11px;
 
-  text-align: center; 
+  text-align: center;
 }
 
 .search-input {
@@ -554,10 +565,37 @@ a.user-account:focus {
 }
 
 .search-form {
-  position: relative; 
+  position: relative;
 }
 
 .search-form::before {
+  content: "";
+
+  width: 49px;
+  height: 42px;
+
+  /*background-image: url("../img/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;*/
+
+/*  top: 12px;
+  left: 17px;*/
+  position: absolute;
+
+  /*opacity: 0.5;*/
+  background-color: #293449;
+}
+
+.search-form:hover::before {
+  /*opacity: 1;*/
+  background-color: #212a3a;
+}
+
+.search-form:focus::before {
+  background-color: #ffffff;
+}
+
+.search-form::after {
   content: "";
 
   width: 17px;
@@ -567,14 +605,14 @@ a.user-account:focus {
   background-repeat: no-repeat;
   background-position: 0 0;
 
-  top: 12px;
+  bottom: 12px;
   left: 17px;
   position: absolute;
 
   opacity: 0.5;
 }
 
-.search-form:hover::before {
+.search-form:hover::after {
   opacity: 1;
 }
 
@@ -599,7 +637,7 @@ a.user-account:focus {
   display: block;
   padding-top: 12px;
   padding-bottom: 12px;
-  
+
   vertical-align: middle;
 }
 
@@ -756,7 +794,8 @@ a.user-account:focus {
   align-items: flex-start;
 }
 
-.footer-logo {
+.footer-logo,
+.footer-logo-current {
   width: 220px;
   height: 22px;
   margin-bottom: 25px;
