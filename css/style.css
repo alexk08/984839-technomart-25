@@ -265,8 +265,9 @@ img {
   color: rgba(255, 209, 128, 0.5);
 }
 
-.footer-bottom {
+.bottom-footer {
   font-size: 16px;
+  line-height: 18px;
 
   background-color: #293449
 }
@@ -571,33 +572,6 @@ a.user-account:focus {
 .search-form::before {
   content: "";
 
-  width: 49px;
-  height: 42px;
-
-  /*background-image: url("../img/icon-search.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;*/
-
-/*  top: 12px;
-  left: 17px;*/
-  position: absolute;
-
-  /*opacity: 0.5;*/
-  background-color: #293449;
-}
-
-.search-form:hover::before {
-  /*opacity: 1;*/
-  background-color: #212a3a;
-}
-
-.search-form:focus::before {
-  background-color: #ffffff;
-}
-
-.search-form::after {
-  content: "";
-
   width: 17px;
   height: 17px;
 
@@ -605,16 +579,35 @@ a.user-account:focus {
   background-repeat: no-repeat;
   background-position: 0 0;
 
-  bottom: 12px;
+  top: 12px;
   left: 17px;
   position: absolute;
 
   opacity: 0.5;
 }
 
-.search-form:hover::after {
+.search-form:hover::before {
   opacity: 1;
 }
+
+.search-form:focus::before {
+  width: 17px;
+  height: 17px;
+
+  background-image: url("../img/icon-search-red.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  top: 12px;
+  left: 17px;
+  position: absolute;
+  
+  opacity: 1;
+  z-index: 2;
+}
+
+/*Попытался все таки через псевдоэлементы сделать иконку поиска не получилось, к следующему заданию все сделаю правильно, 
+с дополнительным тегом и селектором +*/
 
 .header-list {
   padding: 0;
@@ -778,75 +771,87 @@ a.user-account:focus {
 
 .page-footer {
   width: 100%;
+  margin-top: 105px;
 }
 
-.page-footer>.container {
-  min-height: 193px;
-
+.top-footer .container {
   display: flex;
-  justify-content: space-between;
-}
-
-.left-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  margin-bottom: 30px;
 }
 
 .footer-logo,
 .footer-logo-current {
   width: 220px;
   height: 22px;
-  margin-bottom: 25px;
   padding-top: 21px;
   padding-bottom: 26px;
 
   text-align: center;
 
   box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.24);
-}
 
-.footer-contacts {
-  margin: 0px;
-  padding: 0px;
-}
-
-.footer-navigation {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  flex-shrink: 0;
 }
 
 .footer-site-navigation {
   margin: 0px;
   padding: 0px;
+  margin-left: auto;
+  margin-bottom: 5px;
 
   display: flex;
   justify-content: flex-end;
-}
-
-.products-navigation {
-  margin: 0px;
-  padding: 0px;
-
-  display: flex;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: flex-end;
 }
 
 .footer-site-navigation li {
   margin-left: 60px;
 }
 
+.middle-footer .container {
+  display: flex;
+  margin-bottom: 52px;
+}
+
+.footer-contacts {
+  margin: 0px;
+  padding: 0px;
+  flex-shrink: 0;
+}
+
+.products-navigation {
+  margin: 0px;
+  padding: 0px;
+  margin-left: auto;
+
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
 .products-navigation li {
   margin-left: 60px;
 }
 
-.footer-bottom .container {
-  min-height: 107px;
+.bottom-footer {
+  width: 100%;
+}
+
+.bottom-footer .container {
+  min-height: 105px;
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copyright,
+.footer-social,
+.feedback,
+.developer {
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-body header{
