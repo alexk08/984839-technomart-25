@@ -103,16 +103,53 @@ img {
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
+
+  margin-bottom: 5px;
+  padding: 9px 49px 9px 71px;
+  border: 3px solid #ffffff;
+  width: 270px;
+
+  display: block;
+  box-sizing: border-box;
+
+  position: relative;
+}
+
+.header-phone::before {
+  content: "";
+
+  width: 19px;
+  height: 19px;
+
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  position: absolute;
+  top: 10px;
+  left: 12px;
 }
 
 .header-adress {
   font-size: 14px;
   line-height: 24px;
   color: #32425c;
+
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .login {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 69px;
+
+  width: 281px;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .login-link,
@@ -122,6 +159,30 @@ img {
   color: #000000;
 
   background-color: #ffffff;
+
+  display: block;
+  padding: 12px 25px;
+}
+
+.login-link {
+  padding-left: 48px;
+
+  position: relative;
+}
+
+.login-link::before {
+  content: "";
+
+  width: 20px;
+  height: 17px;
+
+  background-image: url("../img/icon-login.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  position: absolute;
+  top: 14px;
+  left: 14px;
 }
 
 .login-link:hover,
@@ -129,9 +190,17 @@ img {
   color: #ee3643;
 }
 
+.login-link:hover::before {
+  background-image: url("../img/icon-login-blue.svg");
+}
+
 .login-link:focus,
 .reg-link:focus {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.login-link:focus::before {
+  background-image: url("../img/icon-login.svg");
 }
 
 .navigation {
@@ -509,14 +578,23 @@ a.user-account:focus {
   border-color: #ee3643;
 }
 
-/*.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
+
   width: 1px;
   height: 1px;
   margin: -1px;
-  …
-}*/
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 /*Стили для сеток*/
 
@@ -601,12 +679,12 @@ a.user-account:focus {
   top: 12px;
   left: 17px;
   position: absolute;
-  
+
   opacity: 1;
   z-index: 2;
 }
 
-/*Попытался все таки через псевдоэлементы сделать иконку поиска не получилось, к следующему заданию все сделаю правильно, 
+/*Попытался все таки через псевдоэлементы сделать иконку поиска не получилось, к следующему заданию все сделаю правильно,
 с дополнительным тегом и селектором +*/
 
 .header-list {
@@ -669,8 +747,8 @@ a.user-account:focus {
 .basket::before {
   content: "";
 
-  width: 14px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
 
   background-image: url("../img/icon-cart.svg");
   background-repeat: no-repeat;
@@ -695,6 +773,7 @@ a.user-account:focus {
   margin-bottom: 40px;
 
   display: flex;
+  /*justify-content: flex-end;*/
 }
 
 .header-title {
@@ -703,11 +782,6 @@ a.user-account:focus {
   width: 197px;
   margin-left: 53px;
   margin-right: 71px;
-}
-
-.login {
-  padding: 0;
-  margin: 0;
 }
 
 .navigation {
