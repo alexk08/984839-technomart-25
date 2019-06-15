@@ -1745,16 +1745,16 @@ input[type="radio"].visually-hidden {
   border: 2px solid #000000;
 }
 
-.slaider {
+.slider {
   box-sizing: border-box;
   width: 620px;
   height: 266px;
   position: relative;
 }
 
-.slaider p,
-.slaider a,
-.slaider img {
+.slider p,
+.slider a,
+.slider img {
   position: absolute;
 }
 
@@ -1823,11 +1823,6 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-right: 20px;
   margin-bottom: 20px;
-/*  display: flex;
-  flex-direction: column;
-  align-items: center;*/
-
-/*  position: relative;*/
 }
 
 .popular-brands-list li:nth-child(4n) {
@@ -1856,11 +1851,149 @@ input[type="radio"].visually-hidden {
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
-.popular-brand:active {
-  border-color: #ffffff;
-  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+.popular-brand:focus {
+  box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
   opacity: 0.3;
 }
+
+/*СЕТКИ СЕРВИСОВ*/
+
+.services {
+  background-color: #f4f8f9;
+
+  box-sizing: border-box;
+  margin-bottom: 80px;
+  padding-top: 65px;
+  min-height: 522px;
+
+}
+
+.about-us {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  width: 398px;
+}
+
+.services-list {
+  list-style: none;
+
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+
+  margin: 0;
+  padding: 47px 0;
+}
+
+.services-list li {
+  color: #ffffff;
+  background-color: #32425c;
+
+  width: 240px;
+  height: 62px;
+  padding: 15px 0;
+  padding-left: 22px;
+  box-sizing: border-box;
+  border-top: 1px solid #41516a;
+  border-bottom: 1px solid #2b364a;
+}
+
+.services-list li:hover {
+  color: #ffffff;
+  background-color: #293449;
+}
+
+.services-list li:active {
+  color: #32425c;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.services-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services-slider {
+  width: 618px;
+}
+
+.service-delivery {
+  min-height: 284px;
+  padding-top: 47px;
+
+  background-image: url('../img/delivery.png');
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  /*display: none;*/
+}
+
+.service-guarantee {
+  display: none;
+}
+
+.service-credit {
+  display: none;
+}
+
+.service-title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #32425c;
+
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.service-description {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+
+  width: 275px;
+  margin: 0;
+  padding: 0;
+}
+
+.Доставка__Мы_с_удовольствием_доставим_ваш_товар {
+  font-size: 36px;
+  font-family: "Cuprum";
+  color: rgb( 50, 66, 92 );
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: left;
+  position: absolute;
+  left: 450px;
+  top: 2064.118px;
+  width: 275px;
+  height: 147px;
+  z-index: 73;
+}
+
+
+.Layer_118_copy {
+  background-image: url("Layer 118 copy.png");
+  opacity: 0.251;
+  position: absolute;
+  left: 360px;
+  top: 1985px;
+  width: 10px;
+  height: 279px;
+  z-index: 59;
+}
+
+
+
 
 /** {
   outline: 0;
