@@ -1709,7 +1709,7 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
-/*СЕТКИ ПРОМОБЛОКА*/
+/*СТИЛИ ПРОМОБЛОКА*/
 
 .promo {
   display: flex;
@@ -1891,7 +1891,15 @@ input[type="radio"].visually-hidden {
   margin-left: 23px;
 }
 
+/*СТИЛИ СЛАЙДЕРА */
 
+.puncher {
+  /*display: none;*/
+}
+
+.drill {
+  /*display: none;*/
+}
 
 .slider {
   box-sizing: border-box;
@@ -1900,15 +1908,103 @@ input[type="radio"].visually-hidden {
   position: relative;
 }
 
-.slider p,
-.slider a,
-.slider img {
+.tabs,
+.slider-control,
+.slide p,
+.slide h3,
+.slide img,
+.slider .button {
   position: absolute;
 }
 
+.slide h3,
+.slide p {
+  margin: 0;
+  padding: 0;
+}
 
+.slider .button  {
+  top: 206px;
+  left: 25px;
+  width: 195px;
+}
 
-/*СЕТКИ ПОПУЛЯРНЫХ ТОВАРОВ*/
+.slide h3 {
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  left: 26px;
+  top: 22px;
+}
+
+.slide p {
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+
+  left: 26px;
+  top: 60px;
+}
+
+.tabs {
+  width: 22px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  top: 114px;
+
+  background-color: transparent;
+
+  border: none;
+
+  cursor: pointer;
+}
+
+.left {
+  background-image: url('../img/icon-left.svg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  left: 25px;
+}
+
+.right {
+  background-image: url('../img/icon-right.svg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+
+  right: 20px;
+}
+
+.slider-control {
+  display: flex;
+
+  left: 295px;
+  bottom: 36px;
+}
+
+.control {
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  padding: 0;
+
+  background-color: #ffffff; 
+
+  border: 2px solid #ffffff;
+  border-radius: 50%; 
+
+  cursor: pointer;
+}
+
+.control.one {
+  margin-right: 10px;
+  background-color: #ee3643;
+}
+
+/*СТИЛИ ПОПУЛЯРНЫХ ТОВАРОВ*/
 
 .products-brands-row {
   display: flex;
@@ -1951,7 +2047,7 @@ input[type="radio"].visually-hidden {
   margin-right: 0;
 }
 
-/*СЕТКИ ПОПУЛЯРНЫХ ПРОИЗВОДИТЕЛЕЙ*/
+/*СТИЛИ ПОПУЛЯРНЫХ ПРОИЗВОДИТЕЛЕЙ*/
 
 .popular-brands {
   margin-bottom: 65px;
@@ -2006,7 +2102,7 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
-/*СЕТКИ СЕРВИСОВ*/
+/*СТИЛИ СЕРВИСОВ*/
 
 .services {
   background-color: #f4f8f9;
