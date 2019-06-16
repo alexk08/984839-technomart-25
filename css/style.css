@@ -1175,8 +1175,7 @@ input[type="radio"].visually-hidden {
 }
 
 
-.page-footer {
-  width: 100%;
+.page-footer:not(.catalog-footer) {
   margin-top: 105px;
 }
 
@@ -1350,7 +1349,7 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-bottom: 21px;
   padding: 0;
-  width: 358;
+  width: 358px;
 
   display: flex;
   /*min-height: 17px;*/
@@ -1380,13 +1379,14 @@ input[type="radio"].visually-hidden {
   width: 220px;
 }
 
-.index-row {
+.index-right-column {
   width: 700px;
 }
 
 .catalog-list {
   padding: 0;
   margin: 0;
+  margin-bottom: 32px;
 
   display: flex;
   flex-wrap: wrap;
@@ -2211,31 +2211,86 @@ input[type="radio"].visually-hidden {
   padding: 0;
 }
 
-.Доставка__Мы_с_удовольствием_доставим_ваш_товар {
-  font-size: 36px;
-  font-family: "Cuprum";
-  color: rgb( 50, 66, 92 );
-  text-transform: uppercase;
-  line-height: 1;
-  text-align: left;
-  position: absolute;
-  left: 450px;
-  top: 2064.118px;
-  width: 275px;
-  height: 147px;
-  z-index: 73;
+/*СТИЛИ ПАГИНАТОРА*/
+
+.pagination-list {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
 }
 
+.pagination-item {
+  margin-right: 10px;
+}
 
-.Layer_118_copy {
-  background-image: url("Layer 118 copy.png");
-  opacity: 0.251;
-  position: absolute;
-  left: 360px;
-  top: 1985px;
-  width: 10px;
-  height: 279px;
-  z-index: 59;
+.pagination-item a {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+
+  box-sizing: border-box;
+  height: 38px;
+  padding: 10px 0;
+  
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+}
+
+.pagination-item a:not(.next) {
+  width: 38px;
+}
+
+.pagination-item a.next {
+  width: 140px;
+}
+
+.pagination-item a:hover {
+  border-color: #bdc6ca;
+}
+
+.pagination-item a:focus {
+  border-color: #ee3643;
+}
+
+.pagination-item a.current {
+  color: #ffffff;
+
+  background-color: #ee3643;
+  border-color: #ee3643;
+}
+
+/*СТИЛИ СТАТЬИ О ПРОДУКТЕ*/
+
+.inner-container {
+  margin-bottom: 60px;
+}
+
+.about-product {
+  color: #000000;
+  background-color: #f2f6f8;
+
+  padding: 0;
+  margin: 0;
+  padding-top: 63px;
+  padding-bottom: 70px;
+}
+
+.about-product p {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+
+  margin: 0;
+  padding: 0;
 }
 
 

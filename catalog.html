@@ -130,12 +130,17 @@
                <button class="apply-button" type="submit">Показать</button>
             </form>
           </section>
-          <div class="index-row">
+          <div class="index-right-column">
             <section class="sort">
               <h3 class="sort-title">Сортировка:</h3>
+              <ul class="sort-list">
+                <li>по цене</li>
+                <li>по типу</li>
+                <li>по функционалу</li>
+              </ul>
+              <button><span class="visually-hidden">По возрастанию</span></button>
+              <button><span class="visually-hidden">По убыванию</span></button>
             </section>
-              <!-- здесь будет элемент сортировки каталога: по цене, по типц по функционалу -->
-
 
             <section class="catalog">
               <h3 class="visually-hidden">Список перфораторов</h3>
@@ -276,11 +281,25 @@
                   <span class="actual-price">12500 р.</span>
                 </li>
               </ul>
+              <ul class="pagination-list">
+                <li class="pagination-item"><a class="current">1</a></li>
+                <li class="pagination-item"><a href="#">2</a></li>
+                <li class="pagination-item"><a href="#">3</a></li>
+                <li class="pagination-item"><a class="next" href="#">Следующая</a></li>
+              </ul>
             </section>
           </div>
         </div>
-
       </div>
+
+      <article class="about-product">
+        <div class="container">
+          <h2 class="title">Пара слов о перфораторах</h2>
+          <p>
+            Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+          </p>
+        </div>
+      </article>
 
       <section class="modal modal-in-basket">
         <h3 class="visually-hidden">Статус работы с товаром</h3>
@@ -293,7 +312,7 @@
       </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer catalog-footer">
 
       <div class="top-footer">
         <div class="container">
