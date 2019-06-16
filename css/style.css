@@ -684,8 +684,7 @@ a.user-account:focus {
   background-color: #f2f6f8;
 }
 
-.filter,
-.sort {
+.filter {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -694,8 +693,7 @@ a.user-account:focus {
   background-color: #ffffff;
 }
 
-.filter-title,
-.sort-title {
+.filter-title {
   margin: 0;
   padding: 10px 0px 10px 19px;
   margin-bottom: 20px;
@@ -730,11 +728,6 @@ a.user-account:focus {
 
 .price.filter-fieldset::before {
   display: none;
-}
-
-
-.sort-title {
-  height: 38px;
 }
 
 .filter-title {
@@ -2209,6 +2202,70 @@ input[type="radio"].visually-hidden {
   width: 275px;
   margin: 0;
   padding: 0;
+}
+
+/*СТИЛИ СОРТИРОВКИ*/
+
+.sort {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+  padding: 10px 17px 10px 19px;
+  width: 700px;
+  box-sizing: border-box;
+
+  display: flex;
+
+  background-color: #f7f3ec;
+}
+
+.sort-title {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+
+  margin: 0;
+  margin-right: 139px;
+  padding: 0;
+  color: #000000;
+}
+
+.sort-list {
+  list-style: none;
+  margin: 0;
+  margin-right: 46px;
+  padding: 0;
+
+  display: flex;
+}
+
+.sort-list {
+  flex-shrink: 0;
+}
+
+.sort-list li:first-child {
+  margin-right: 71px;
+}
+
+.sort-list li:nth-child(2) {
+  margin-right: 65px;
+}
+
+.sort .up {
+  margin-right: 22px;
+}
+
+.sort button {
+  width: 11px;
+  height: 10px;
+  border: none;
+  background-color: #ee3643;
+
+  cursor: pointer;
 }
 
 /*СТИЛИ ПАГИНАТОРА*/
