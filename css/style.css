@@ -1984,10 +1984,10 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
 
-  background-color: #ffffff; 
+  background-color: #ffffff;
 
   border: 2px solid #ffffff;
-  border-radius: 50%; 
+  border-radius: 50%;
 
   cursor: pointer;
 }
@@ -2119,36 +2119,38 @@ input[type="radio"].visually-hidden {
   width: 398px;
 }
 
-.services-list {
-  list-style: none;
+.services-control {
+  margin: 0;
+  padding: 47px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
 
+.services-button {
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
-
-  margin: 0;
-  padding: 47px 0;
-}
-
-.services-list li {
   color: #ffffff;
   background-color: #32425c;
 
   width: 240px;
   height: 62px;
+  margin: 0;
   padding: 15px 0;
   padding-left: 22px;
   box-sizing: border-box;
   border-top: 1px solid #41516a;
   border-bottom: 1px solid #2b364a;
+  cursor: pointer;
 }
 
-.services-list li:hover {
+.services-button:hover {
   color: #ffffff;
   background-color: #293449;
 }
 
-.services-list li:active {
+.services-button:active {
   color: #32425c;
   background-color: #ffffff;
   border-color: #ffffff;
@@ -2234,39 +2236,80 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
-.sort-list {
-  list-style: none;
-  margin: 0;
-  margin-right: 46px;
-  padding: 0;
-
+.sort-buttons {
   display: flex;
+  flex-wrap: wrap;
 }
 
-.sort-list {
-  flex-shrink: 0;
+.sort-button {
+  font: inherit;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
+
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-bottom: 1px dotted #ee3643;
+
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.sort-list li:first-child {
+.price.sort-button {
   margin-right: 71px;
 }
 
-.sort-list li:nth-child(2) {
+.type.sort-button {
   margin-right: 65px;
 }
 
-.sort .up {
-  margin-right: 22px;
+.functional.sort-button {
+  margin-right: 46px;
 }
 
-.sort button {
-  width: 11px;
-  height: 10px;
+.arrow {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
   border: none;
-  background-color: #ee3643;
-
+  background-color: transparent;
   cursor: pointer;
 }
+
+.up.arrow {
+  margin-right: 21px;
+}
+
+.down.arrow {
+  opacity: 0.3;
+}
+
+.sort-button:hover {
+  color: #000000;
+  border-bottom: 1px solid #ee3643;
+}
+
+.current.sort-button {
+  color: #ee3643;
+  border: none;
+  cursor: text;
+}
+
+.arrow:hover {
+  opacity: 1;
+}
+
+.current.arrow path{
+  fill: #ee3643;
+}
+
+.current.arrow {
+  cursor: auto;
+}
+
+
 
 /*СТИЛИ ПАГИНАТОРА*/
 
@@ -2296,7 +2339,7 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
   height: 38px;
   padding: 10px 0;
-  
+
   border: 1px solid #e5e5e5;
   border-radius: 3px;
 }

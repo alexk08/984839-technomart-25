@@ -133,13 +133,23 @@
           <div class="index-right-column">
             <section class="sort">
               <h3 class="sort-title">Сортировка:</h3>
-              <ul class="sort-list">
-                <li>по цене</li>
-                <li>по типу</li>
-                <li>по функционалу</li>
-              </ul>
-              <button class="up"><span class="visually-hidden">По возрастанию</span></button>
-              <button class="down"><span class="visually-hidden">По убыванию</span></button>
+              <div class="sort-buttons">
+                <button class="sort-button price current" type="button">по цене</button>
+                <button class="sort-button type" type="button">по типу</button>
+                <button class="sort-button functional " type="button">по функционалу</button>
+                <button class="arrow up current" type="button">
+                  <span class="visually-hidden">По возрастанию</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                    <path fill="#231F20" d="M5.5 0L0 10h11z"/>
+                  </svg>
+                </button>
+                <button class="arrow down" type="button">
+                  <span class="visually-hidden">По убыванию</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                    <path fill="#231F20" d="M5.5 10L0 0h11"/>
+                  </svg>
+                </button>
+              </div>
             </section>
 
             <section class="catalog">
