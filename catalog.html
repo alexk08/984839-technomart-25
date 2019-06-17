@@ -84,10 +84,24 @@
         <div class="index-columns">
           <section class="filter">
             <h3 class="filter-title">Фильтр:</h3>
-            <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
+            <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
               <!-- Фильт по цене -->
               <fieldset class="price filter-fieldset">
                 <legend>Цена:</legend>
+                <div class="range-filter">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="toggle toggle-min"></div>
+                    <div class="toggle toggle-max"></div>
+                  </div>
+                  <div class="price-controls">
+                    <input name="min-price" type="text" value="0">
+                    <span>&#8212</span>
+                    <input name="max-price" type="text" value="30000">
+                  </div>
+                </div>
               </fieldset>
               <fieldset class="brand filter-fieldset">
                 <legend>Производители:</legend>

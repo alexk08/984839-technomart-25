@@ -2097,7 +2097,7 @@ input[type="radio"].visually-hidden {
 
 /*СТИЛИ СЕРВИСОВ*/
 
-.services {
+.service {
   background-color: #f4f8f9;
 
   box-sizing: border-box;
@@ -2115,19 +2115,35 @@ input[type="radio"].visually-hidden {
 
   margin: 0;
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
   width: 398px;
 }
 
-.services-control {
+.service-control {
   margin: 0;
-  padding: 47px 0;
+  padding: 46px 0;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+
+  position: relative;
 }
 
-.services-button {
+.service-control::before {
+  content: "";
+
+  width: 10px;
+  height: 272px;
+
+  background-image: url('../img/service-shadow.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  position: absolute;
+  top: 0;
+  left: 230px;
+}
+
+.service-button {
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
@@ -2140,46 +2156,64 @@ input[type="radio"].visually-hidden {
   padding: 15px 0;
   padding-left: 22px;
   box-sizing: border-box;
+  border: none;
   border-top: 1px solid #41516a;
   border-bottom: 1px solid #2b364a;
   cursor: pointer;
+
+  display: flex;
 }
 
-.services-button:hover {
+.service-button:hover {
   color: #ffffff;
   background-color: #293449;
 }
 
-.services-button:active {
+.service-button.current {
   color: #32425c;
   background-color: #ffffff;
   border-color: #ffffff;
 }
 
-.services-row {
+.service-row {
   display: flex;
   justify-content: space-between;
 }
 
-.services-slider {
+.service-slider {
   width: 618px;
 }
 
 .service-delivery {
   min-height: 284px;
-  padding-top: 47px;
+  padding-top: 43px;
 
   background-image: url('../img/delivery.png');
   background-repeat: no-repeat;
   background-position: 100% 100%;
+
   /*display: none;*/
 }
 
 .service-guarantee {
+  min-height: 284px;
+  padding-top: 43px;
+
+  background-image: url('../img/guarantee.png');
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+
   display: none;
 }
 
 .service-credit {
+  min-height: 284px;
+  padding-top: 43px;
+
+  background-image: url('../img/credit.png');
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+
   display: none;
 }
 
@@ -2195,15 +2229,129 @@ input[type="radio"].visually-hidden {
   margin-bottom: 25px;
 }
 
-.service-description {
+.description {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
 
-  width: 275px;
   margin: 0;
   padding: 0;
+}
+
+.service-delivery .description {
+  width: 275px;
+}
+
+.service-guarantee .description {
+  width: 379px;
+}
+
+.service-credit .description {
+  width: 285px;
+  margin-bottom: 27px;
+}
+
+.requestion-button {
+  width: 195px;
+}
+
+/*СТИЛИ ФИЛЬТРА ЦЕНЫ*/
+
+.price.filter-fieldset {
+  margin: 0;
+  padding: 0;
+  
+  border: none;
+}
+
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
+}
+
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+  position: relative;
+  
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  
+  background-color: #f1f1f1;
+  
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+  
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 8px 10px;
+  
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+  
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
 }
 
 /*СТИЛИ СОРТИРОВКИ*/
@@ -2396,7 +2544,7 @@ input[type="radio"].visually-hidden {
 
 
 
-/** {
+* {
   outline: 0;
 }
-*/
+
