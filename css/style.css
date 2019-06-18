@@ -110,7 +110,7 @@ img {
   left: 17px;
 }
 
-.search-input:hover + svg path {
+.search-form:hover path {
   fill: #ffffff;
 }
 
@@ -132,7 +132,7 @@ img {
   color: #ee3643;
 
   margin-bottom: 5px;
-  padding: 9px 49px 9px 71px;
+  padding: 9px 0 9px 71px;
   border: 3px solid #ffffff;
   width: 270px;
 
@@ -317,24 +317,6 @@ img {
   fill: #c5c5c5;
 }
 
-/*.user-logout svg:hover {
-  fill: #32425c;
-}*/
-
-/*.user-profile::after {
-  content: "";
-  width: 20px;
-  height: 17px;
-
-  background-image: url("../img/icon-logout.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-
-  position: absolute;
-  top: 14px;
-  right: 11px;
-}*/
-
 .user-menu .index-row {
   width: 300px;
 
@@ -474,10 +456,6 @@ img {
   background-color: #ba2732;
 }
 
-/*.modal {
-  display: none;
-}*/
-
 .page-footer {
   font-size: 18px;
   line-height: 24px;
@@ -517,7 +495,6 @@ img {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.5);
 }
-
 
 .products-navigation a {
   color: #ffd180;
@@ -716,17 +693,17 @@ a.user-account:focus {
   position: relative;
 }
 
-.filter-fieldset::before {
+.filter-fieldset::after {
   content: "";
   background-color: #e5e5e5;
   position: absolute;
   left: 0;
-  top: -20px;
+  bottom: -1px;
   width: 220px;
   height: 1px;
 }
 
-.price.filter-fieldset::before {
+.supply.filter-fieldset::after {
   display: none;
 }
 
@@ -736,7 +713,7 @@ a.user-account:focus {
 }
 
 .filter legend {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 
   font-size: 17px;
   font-weight: 700;
@@ -978,15 +955,13 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  /*min-height: 320px;*/
 }
 
 .top-header {
   width: 100%;
   margin-bottom: 46px;
 
-  /*min-height: 42px;*/
+  height: 42px;
 }
 
 .container {
@@ -1102,6 +1077,7 @@ input[type="radio"].visually-hidden {
   margin-left: auto;
   margin-right: 71px;
   margin-top: 3px;
+  width: 197px;
 }
 
 .navigation {
@@ -1149,6 +1125,14 @@ input[type="radio"].visually-hidden {
   margin-bottom: 27px;
 }
 
+.company .narrow-paragraph {
+  width: 390px;
+}
+
+.contacts .narrow-paragraph {
+  width: 180px;
+}
+
 .company {
   max-width: 520px;
   min-height: 370px;
@@ -1166,7 +1150,6 @@ input[type="radio"].visually-hidden {
   flex-direction: column;
   justify-content: space-between;
 }
-
 
 .page-footer:not(.catalog-footer) {
   margin-top: 105px;
@@ -1215,6 +1198,7 @@ input[type="radio"].visually-hidden {
 .footer-contacts {
   margin: 0px;
   padding: 0px;
+  width: 323px;
   flex-shrink: 0;
 }
 
@@ -1237,7 +1221,7 @@ input[type="radio"].visually-hidden {
 }
 
 .bottom-footer .container {
-  min-height: 105px;
+  height: 105px;
 
   display: flex;
   align-items: center;
@@ -1253,6 +1237,7 @@ input[type="radio"].visually-hidden {
 
 .footer-copyright {
   margin-right: 161px;
+  width: 227px;
 }
 
 .footer-social {
@@ -1328,10 +1313,12 @@ input[type="radio"].visually-hidden {
 
 .feedback {
   margin-right: 53px;
+  width: 137px;
 }
 
 .developer {
   margin-right: auto;
+  width: 98px;
 }
 
 .catalog-body header{
@@ -1345,7 +1332,6 @@ input[type="radio"].visually-hidden {
   width: 358px;
 
   display: flex;
-  /*min-height: 17px;*/
 }
 
 .inner-container {
@@ -1393,7 +1379,6 @@ input[type="radio"].visually-hidden {
   width: 218px;
 
   border: 1px solid #e5e5e5;
-  /*box-shadow: inset 1px 1px 0 0 #e5e5e5;*/
 
   display: flex;
   flex-direction: column;
@@ -1427,7 +1412,6 @@ input[type="radio"].visually-hidden {
   top: -1px;
   left: 0;
 
-  /*box-sizing: border-box;*/
   width: 177px;
   height: 91px;
   padding: 44px 0;
@@ -1657,7 +1641,7 @@ input[type="radio"].visually-hidden {
 .modal-in-basket p {
   margin: 0;
   padding: 0;
-  padding: 19px 46px 19px 99px;
+  padding: 19px 0 19px 99px;
   margin-bottom: 85px;
 
   font-size: 30px;
@@ -2258,37 +2242,23 @@ input[type="radio"].visually-hidden {
 
 /*СТИЛИ ФИЛЬТРА ЦЕНЫ*/
 
-.price.filter-fieldset {
-  margin: 0;
-  padding: 0;
-  
-  border: none;
-}
-
 .range-filter {
-  width: 260px;
-  margin-top: 49px;
-}
-
-.filter-item legend {
-  font-size: 18px;
-  line-height: 24px;
-  text-transform: uppercase;
-  font-weight: 700;
+  padding-bottom: 25px;
+  width: 220px;
 }
 
 .range-controls {
   position: relative;
-  
+
   height: 41px;
-  margin-bottom: 15px;
+  margin-bottom: 9px;
   padding-top: 39px;
   padding-right: 20px;
   padding-left: 20px;
-  
-  background-color: #f1f1f1;
-  
-  border-radius: 5px;
+
+  background-color: #f7f3ec;
+
+  border-radius: 4px;
 }
 
 .range-controls .scale {
@@ -2298,7 +2268,7 @@ input[type="radio"].visually-hidden {
 }
 
 .range-controls .bar {
-  width: 70%;
+  width: 85%;
   height: 2px;
 
   background: #00ca74;
@@ -2306,9 +2276,9 @@ input[type="radio"].visually-hidden {
 
 .range-controls .toggle {
   position: absolute;
-  top: 31px;
+  top: 30px;
   left: 0;
-  
+
   width: 4px;
   height: 4px;
   padding: 0;
@@ -2329,29 +2299,23 @@ input[type="radio"].visually-hidden {
 }
 
 .price-controls {
-  font-size: 0;
-}
-
-.price-controls label {
-  display: inline-block;
-  width: 50%;
-  
-  font-size: 16px;
-  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .price-controls input {
-  width: 60px;
-  padding: 8px 10px;
-  
-  font-family: Roboto, Arial, sans-serif;
-  font-size: 16px;
+  box-sizing: border-box;
+  width: 95px;
+  padding: 10px;
+
+  font-size: 17px;
+  line-height: 18px;
   text-align: center;
-  color: #283136;
-  
+
   border: none;
-  border-radius: 5px;
-  background: #f1f1f1;
+  border-radius: 3px;
+  background: #f7f3ec;
 }
 
 /*СТИЛИ СОРТИРОВКИ*/
@@ -2364,7 +2328,7 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
 
   margin-bottom: 20px;
-  padding: 10px 17px 10px 19px;
+  padding: 10px 0 10px 19px;
   width: 700px;
   box-sizing: border-box;
 
@@ -2457,8 +2421,6 @@ input[type="radio"].visually-hidden {
   cursor: auto;
 }
 
-
-
 /*СТИЛИ ПАГИНАТОРА*/
 
 .pagination-list {
@@ -2541,10 +2503,7 @@ input[type="radio"].visually-hidden {
   padding: 0;
 }
 
-
-
-
-* {
+/** {
   outline: 0;
-}
+}*/
 
