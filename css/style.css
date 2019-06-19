@@ -1,4 +1,5 @@
 body {
+  min-width: 960px;
   margin: 0;
   padding: 0;
 
@@ -401,7 +402,7 @@ img {
 
 .transport-list li {
   padding-left: 36px;
-  margin-bottom: 17px;
+  margin-bottom: 20px;
 
   position: relative;
 }
@@ -421,7 +422,7 @@ img {
 
   position: absolute;
   left: 0;
-  top: 7px;
+  top: 9px;
 }
 
 .button {
@@ -436,7 +437,7 @@ img {
   display: block;
   box-sizing: border-box;
   height: 38px;
-  padding: 11px 0px 9px;
+  padding: 11px 0px 9px 2px;
   border: 0;
   border-radius: 3px;
 
@@ -673,7 +674,7 @@ a.user-account:focus {
 .filter-title {
   margin: 0;
   padding: 10px 0px 10px 19px;
-  margin-bottom: 20px;
+  margin-bottom: 11px;
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
@@ -821,10 +822,6 @@ a.user-account:focus {
 .catalog {
   font-family: "PT Sans", Arial, sans-serif;
   color: #000000;
-}
-
-.catalog h3.visually-hidden {
-  display: none;
 }
 
 .catalog-list {
@@ -1066,7 +1063,7 @@ input[type="radio"].visually-hidden {
 }
 
 .middle-header {
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 
   display: flex;
 }
@@ -1097,7 +1094,7 @@ input[type="radio"].visually-hidden {
 
 .navigation-list a {
   display: block;
-  padding: 21px 31px 22px;
+  padding: 20px 32px 23px 29px;
 
   vertical-align: middle;
  }
@@ -1117,20 +1114,35 @@ input[type="radio"].visually-hidden {
   flex-direction: column;
 }
 
-.title,
-.company p,
-.contacts p {
+.title {
   margin: 0;
   padding: 0;
   margin-bottom: 27px;
 }
 
+.company .title,
+.contacts .title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.company p,
+.contacts p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+
 .company .narrow-paragraph {
   width: 390px;
+  margin-bottom: 19px;
 }
 
 .contacts .narrow-paragraph {
   width: 180px;
+  margin-bottom: 31px;
 }
 
 .company {
@@ -1152,12 +1164,12 @@ input[type="radio"].visually-hidden {
 }
 
 .page-footer:not(.catalog-footer) {
-  margin-top: 105px;
+  margin-top: 86px;
 }
 
 .top-footer .container {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 }
 
 .footer-logo,
@@ -1178,7 +1190,7 @@ input[type="radio"].visually-hidden {
   margin: 0px;
   padding: 0px;
   margin-left: auto;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 
   display: flex;
   justify-content: flex-end;
@@ -1192,11 +1204,12 @@ input[type="radio"].visually-hidden {
 
 .middle-footer .container {
   display: flex;
-  margin-bottom: 52px;
+  margin-bottom: 50px;
 }
 
 .footer-contacts {
   margin: 0px;
+  margin-left: 3px;
   padding: 0px;
   width: 323px;
   flex-shrink: 0;
@@ -1221,7 +1234,7 @@ input[type="radio"].visually-hidden {
 }
 
 .bottom-footer .container {
-  height: 105px;
+  height: 109px;
 
   display: flex;
   align-items: center;
@@ -1341,10 +1354,7 @@ input[type="radio"].visually-hidden {
 }
 
 .page-title {
-  padding: 0;
-  padding-top: 29px;
-  padding-bottom: 30px;
-  padding-left: 30px;
+  padding: 29px;
   margin: 0;
   margin-bottom: 20px;
 }
@@ -1394,8 +1404,8 @@ input[type="radio"].visually-hidden {
 .catalog-item-title {
   padding: 0;
   margin: 0;
-  margin-top: 10px;
-  margin-bottom: 15px;
+  margin-top: 5px;
+  margin-bottom: 13px;
 
   display: flex;
   flex-direction: column;
@@ -1885,7 +1895,7 @@ input[type="radio"].visually-hidden {
   position: relative;
 }
 
-.tabs,
+.arrow,
 .slider-control,
 .slide p,
 .slide h3,
@@ -1925,7 +1935,7 @@ input[type="radio"].visually-hidden {
   top: 60px;
 }
 
-.tabs {
+.arrow {
   width: 22px;
   height: 40px;
   margin: 0;
@@ -1939,14 +1949,14 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.left {
+.previous {
   background-image: url('../img/icon-left.svg');
   background-position: 0 0;
   background-repeat: no-repeat;
   left: 25px;
 }
 
-.right {
+.next {
   background-image: url('../img/icon-right.svg');
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -1976,7 +1986,7 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.control.one {
+.control.active {
   margin-right: 10px;
   background-color: #ee3643;
 }
@@ -2010,6 +2020,8 @@ input[type="radio"].visually-hidden {
 }
 
 .popular-products-list {
+  font-family: "PT Sans", Arial, sans-serif;
+  color: #000000;
   list-style: none;
 
   margin: 0;
@@ -2105,7 +2117,7 @@ input[type="radio"].visually-hidden {
 
 .service-control {
   margin: 0;
-  padding: 46px 0;
+  padding: 40px 0;
   display: flex;
   flex-direction: column;
 
@@ -2170,7 +2182,7 @@ input[type="radio"].visually-hidden {
 
 .service-delivery {
   min-height: 284px;
-  padding-top: 43px;
+  padding-top: 39px;
 
   background-image: url('../img/delivery.png');
   background-repeat: no-repeat;
@@ -2181,7 +2193,7 @@ input[type="radio"].visually-hidden {
 
 .service-guarantee {
   min-height: 284px;
-  padding-top: 43px;
+  padding-top: 39px;
 
   background-image: url('../img/guarantee.png');
   background-repeat: no-repeat;
@@ -2192,7 +2204,7 @@ input[type="radio"].visually-hidden {
 
 .service-credit {
   min-height: 284px;
-  padding-top: 43px;
+  padding-top: 39px;
 
   background-image: url('../img/credit.png');
   background-repeat: no-repeat;
@@ -2381,7 +2393,7 @@ input[type="radio"].visually-hidden {
   margin-right: 46px;
 }
 
-.arrow {
+.sort-control {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -2390,11 +2402,11 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.up.arrow {
+.up.sort-control {
   margin-right: 21px;
 }
 
-.down.arrow {
+.down.sort-control {
   opacity: 0.3;
 }
 
@@ -2409,15 +2421,15 @@ input[type="radio"].visually-hidden {
   cursor: text;
 }
 
-.arrow:hover {
+.sort-control:hover {
   opacity: 1;
 }
 
-.current.arrow path{
+.current.sort-control path{
   fill: #ee3643;
 }
 
-.current.arrow {
+.current.sort-control {
   cursor: auto;
 }
 
