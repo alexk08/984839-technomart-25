@@ -1146,9 +1146,12 @@ a.user-account:active {
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 
   box-shadow: inset 0 -5px 0 0 #293449;
+}
+
+.navigation-list li:first-child {
+  margin-left: 23px;
 }
 
 .navigation-list a {
@@ -1634,6 +1637,10 @@ a.user-account:active {
   border-top: 7px solid #ff5257;
 
   display: none;
+}
+
+.modal-show {
+  display: block;
 }
 
 .write-us-row {
@@ -2369,6 +2376,15 @@ a.user-account:active {
   cursor: pointer;
 }
 
+.range-controls .toggle:hover,
+.range-controls .toggle:focus {
+  background-color: #000000;
+}
+
+.range-controls .toggle:active {
+  background-color: #ee3643;
+}
+
 .range-controls .toggle-min {
   left: 18px;
 }
@@ -2430,6 +2446,7 @@ a.user-account:active {
 .sort-buttons {
   display: flex;
   flex-wrap: wrap;
+  max-width: 401px;
 }
 
 .sort-button {
@@ -2458,6 +2475,10 @@ a.user-account:active {
 
 .functional.sort-button {
   margin-right: 46px;
+}
+
+.sort-controls {
+  flex-shrink: 0;
 }
 
 .sort-control {
