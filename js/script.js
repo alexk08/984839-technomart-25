@@ -13,66 +13,66 @@ var mapPopup = document.querySelector(".modal-map");
 var mapClose = mapPopup.querySelector(".modal-close");
 
 try {
-    storage = localStorage.getItem("nameField");
+  storage = localStorage.getItem("nameField");
 } catch (err) {
-    isStorageSupport = false;
+  isStorageSupport = false;
 }
 
 link.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.add("modal-show");
-    if (storage) {
-        nameField.value = storage;
-        emailField.focus();
-    } else {
-        nameField.focus();
-    }
+  evt.preventDefault();
+  popup.classList.add("modal-show");
+  if (storage) {
+    nameField.value = storage;
+    emailField.focus();
+  } else {
+    nameField.focus();
+  }
 });
 
-close.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    popup.classList.remove("modal-show");
-    popup.classList.remove("modal-error");
+close.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popup.classList.remove("modal-show");
+  popup.classList.remove("modal-error");
 });
 
 form.addEventListener("submit", function (evt) {
-    if (!nameField.value || !emailField.value || !messageField.value) {
+  if (!nameField.value || !emailField.value || !messageField.value) {
     evt.preventDefault();
     popup.classList.remove("modal-error");
     popup.offsetWidth = popup.offsetWidth;
     popup.classList.add("modal-error");
-    } else {
-        if (isStorageSupport) {
-            localStorage.setItem("nameField", nameField.value);
-        }
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("nameField", nameField.value);
     }
+  }
 });
 
-window.addEventListener("keydown", function(evt) {
-    if (evt.keyCode === 27) {
-        evt.preventDefault();
-        if (popup.classList.contains("modal-show")) {
-            popup.classList.remove("modal-show");
-            popup.classList.remove("modal-error");
-        }
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (popup.classList.contains("modal-show")) {
+      popup.classList.remove("modal-show");
+      popup.classList.remove("modal-error");
     }
+  }
 });
 
 mapLink.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    mapPopup.classList.add("modal-show");
+  evt.preventDefault();
+  mapPopup.classList.add("modal-show");
 });
-  
+
 mapClose.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    mapPopup.classList.remove("modal-show");
+  evt.preventDefault();
+  mapPopup.classList.remove("modal-show");
 });
-  
- window.addEventListener("keydown", function (evt) {
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
     evt.preventDefault();
-    if (evt.keyCode === 27) {
-        if (mapPopup.classList.contains("modal-show")) {
-        mapPopup.classList.remove("modal-show");
-        }
+    if (mapPopup.classList.contains("modal-show")) {
+      mapPopup.classList.remove("modal-show");
     }
+  }
 });
