@@ -28,7 +28,7 @@
       </div>
       <div class="container">
         <div class="middle-header">
-          <h1 class="header-title">Интернет-магазин строительных материалов<br>и инструментов для ремонта</h1>
+          <h1 class="header-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
           <div class="header-contacts">
             <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
             <p class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -92,9 +92,11 @@
                     <div class="toggle toggle-max" tabindex="0"></div>
                   </div>
                   <div class="price-controls">
-                    <input name="min-price" type="text" value="0">
+                    <input name="min-price" type="text" value="0" id="min-price-field">
+                    <label for="min-price-field" class="visually-hidden">Минимальный порог фильтра цены</label>
                     <span>&#8212;</span>
-                    <input name="max-price" type="text" value="30000">
+                    <input name="max-price" type="text" value="30000" id="max-price-field">
+                    <label for="max-price-field" class="visually-hidden">Максимальный порог фильтра цены</label>
                   </div>
                 </div>
               </fieldset>
