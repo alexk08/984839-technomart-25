@@ -1601,6 +1601,46 @@ a.user-account:active {
   background-repeat: no-repeat;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -2000px);
+  }
+
+  70% {
+    transform: translate(-50%, -45%);
+  }
+
+  90% {
+    transform: translate(-50%, -52%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate(-52%, -50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(-48%, -50%);
+  }
+}
+
 .modal {
   position: fixed;
   left: 50%;
@@ -1624,23 +1664,20 @@ a.user-account:active {
   border: 0;
 
   cursor: pointer;
+  z-index: 11;
 }
 
 .modal-write-us {
   width: 620px;
   min-height: 430px;
   padding: 47px 80px 37px;
-  z-index: 7;
+  z-index: 9;
 
   background-color: #ffffff;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75), inset 0 -112px 0 #f4f4f4;
   border-top: 7px solid #ff5257;
 
   display: none;
-}
-
-.modal-show {
-  display: block;
 }
 
 .write-us-row {
@@ -1701,18 +1738,39 @@ a.user-account:active {
   z-index: 6;
 
   display: none;
+  width: 940px;
+  height: 446px;
+}
+
+.modal-show {
+  display: block;
+
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal-map div {
-  width: 940px;
-  height: 446px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 7;
+}
+
+.modal-map iframe {
+  position: relative;
+  z-index: 8;
+
+  border: none;
 }
 
 .modal-in-basket {
   width: 620px;
   min-height: 282px;
   padding: 47px 80px 37px;
-  z-index: 8;
+  z-index: 10;
 
   background-color: #ffffff;
   box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75), inset 0 -112px 0 #f1f1f1;
