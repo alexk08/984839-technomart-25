@@ -1,0 +1,17 @@
+{
+  "name": "technomart-25",
+  "version": "25.0.0",
+  "private": true,
+  "description": "Личный проект «Техномарт» от HTML Academy",
+  "devDependencies": {
+    "gh-pages": "^2.2.0",
+    "gulp": "4.0.x"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp start"
+  },
+  "engines": {
+    "node": "8.16"
+  }
+}
