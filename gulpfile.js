@@ -6,12 +6,12 @@ const path = require('path');
 
 gulp.task("copy", function() {
   return gulp.src([
-    "source/css/*.css",
-    "source/*.html",
-    "source/img/*.{png,jpg,svg}",
-    "source/js/*.js"
+    "./css/*.css",
+    "./*.html",
+    "./img/*.{png,jpg,svg}",
+    "./js/*.js"
   ], {
-    base: "source"
+    base: "./"
   })
   .pipe(gulp.dest("build"));
 });
